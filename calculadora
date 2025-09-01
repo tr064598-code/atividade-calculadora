@@ -1,0 +1,59 @@
+const entrada = require('prompt-sync')({sigint: false});
+function Soma( n1, n2){
+return n1 + n2;
+}
+console.log(n1 + n2);
+
+function Subtracao(n1, n2){
+return n1 - n2; 
+}
+console.log(n1 - n2);
+
+function Multiplicação(n1, n2){
+return n1 * n2; 
+}
+console.log(n1 * n2);
+
+function Divisão(n1, n2){
+if (b == 0){
+   return "Erro" 
+}
+return n1 / n2;
+}
+console.log(n1 / n2);
+
+let continuar = true;
+
+while(continuar){
+    console.log("Calculadora Simples");
+    console.log("1. Soma");
+    console.log("2. Subtracao");
+    console.log("3. Multiplicação");
+    console.log("4. Dvisão");
+    console.log("5. Sair");
+
+    let opcao = entrada("Digite a opção");
+    if (opcao == "5") {
+        continuar = false
+        console.log("Encerrando Calculadora...");
+    }else{
+    let n1 = entrada("Digite o primeiro numero:");
+    let n2 = entrada("Digite o segundo numero");
+    let resultado;
+    }
+   if (opcao == "1" || opcao == "soma"){
+    resultado = soma(n1, n2);
+   }else if(opcao == "2"|| opcao == "Subtracao"){
+    resultado = Subtracao(n1, n2);
+   }else if(opcao == "3"|| opcao == "Multiplicação"){
+    resultado = Multiplicação(n1, n2);
+   }else if(opcao == "4"|| opcao == "Divisão"){
+    resultado = Divisão(n1, n2);
+   }else{
+    console.log("Erro");
+    continuar;
+   }
+   
+   
+   console.log("Resultado:", resultado);
+}
